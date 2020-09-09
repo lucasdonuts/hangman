@@ -1,14 +1,12 @@
 class Word
-  
+  attr_accessor :word
   def initialize(dictionary)
-    @dictionary = dictionary
-    random_word(@dictionary)
+    random_word(dictionary)
     @blanks = Array.new(@word.length)
   end
 
   def random_word(dictionary)
     @word = dictionary.sample(1).join("").downcase
-    puts @word
   end
 
   def display_blanks
